@@ -1,0 +1,30 @@
+﻿@model Todo
+
+@{
+    ViewData["Title"] = "Show";
+}
+
+    <div>
+        <h4>Todo</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+        </dl>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.DateStart)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DateStart)
+            </dd>
+        </dl>
+    </div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Go back</a>
+</div>
